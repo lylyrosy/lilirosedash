@@ -1,4 +1,6 @@
 {
+  "homepage": "https://lylyrosy.github.io/lilirosedash",
+
   "name": "lilirosedash",
   "private": true,
   "version": "0.0.0",
@@ -6,7 +8,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy":"gh-pages -d build"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
