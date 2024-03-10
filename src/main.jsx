@@ -33,7 +33,7 @@ import {
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<  App />}>
+    <Route path="/lilirosedash" element={<  App />}>
       <Route index element={<Dashboard/>} />
       <Route path="team" element={<Team />} />
       <Route path="infos" element={<Infos />} />

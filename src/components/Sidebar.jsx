@@ -37,7 +37,7 @@ import NoteAltIcon from '@mui/icons-material/NoteAlt';
 
 const array1=[
   
-  {"text":"Dashboard", "icon":<FoundationIcon/>, "path":"/"},
+  {"text":"Dashboard", "icon":<FoundationIcon/>, "path":"/lilirosedash"},
   {"text":"Ajouter une activité", "icon":<AddReactionIcon/>, "path":"/new"},
   {"text":"Mes activités", "icon":<FormatListNumberedIcon/>, "path":"/team"},
   // {"text":"Ajouter un membre ", "icon":<PermContactCalendarOutlinedIcon/>, "path":"/nouveau"},
