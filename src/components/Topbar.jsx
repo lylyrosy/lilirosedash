@@ -18,13 +18,6 @@ import NightlightOutlinedIcon from '@mui/icons-material/NightlightOutlined';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
 import { useTheme } from '@emotion/react';
 
-const ColorButton = styled(Button)(({ theme }) => ({
-  // color: theme.palette.getContrastText(),
-  backgroundColor: theme.palette.magie.main,
-  '&:hover': {
-    backgroundColor: theme.palette.appco.main,
-  },
-}));
 
 
 
@@ -277,29 +270,28 @@ color="inherit">
 {/* <IconButton color="inherit">
   <Person2OutlinedIcon/>
 </IconButton> */}
-<IconButton color="inherit">
-<ColorButton 
 
 
-onClick={() => {
-
-  window.location.href = 'https://lylyrosy.github.io/lilirose.dz/';
-
-
- }} 
-
-
-
-sx={{mt:'50px',
-display:'flex',
-margin:'auto',
-textAlign:'center'}} variant="contained">Lili Rose Thérapie &nbsp; </ColorButton></IconButton>
 
 </Stack >
 
+
+
+
+
+
+<Box/>
+
+
+
+
+
         </Toolbar>
+
+ 
+
       </AppBar>
-            
+
         </div>
     );
 }

@@ -38,7 +38,7 @@ const Row1 = () => {
      
 
 
-        <Stack sx={{mb:'22px'}} direction={"row"} flexWrap={"wrap"} gap={1} justifyContent={{xs: "center", sm:"space-evenly"} }>
+        <Stack sx={{mb:'22px'}} direction={"row"} flexWrap={"wrap"} gap={2} justifyContent='space-between' >
 
 
       <Paperico icone= {<FormatListNumberedIcon sx={{fontSize:'23px', color:theme.palette.magie.main}} /> } libellé={"Activités"} nombre={localStorage.getItem("nbact")} titre={ localStorage.getItem("lastact")} />
@@ -47,7 +47,7 @@ const Row1 = () => {
 
 
 
-      <Paper sx={{height: '130px', minWidth:'400px', p:1.5, display:'flex', justifyContent:'space-evenly'}}>
+      <Paper sx={{height: '130px', minWidth:'450px', p:1.5, display:'flex', justifyContent:'space-between'}}>
 
 <Stack gap={1}>
 

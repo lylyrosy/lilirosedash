@@ -13,7 +13,7 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import List from '@mui/material/List';
-import { styled, useTheme, Avatar, Typography, Tooltip } from '@mui/material';
+import { styled, useTheme, Avatar, Typography, Tooltip, Button } from '@mui/material';
 import MuiDrawer from '@mui/material/Drawer';
 import FoundationIcon from '@mui/icons-material/Foundation';
 import Diversity1Icon from '@mui/icons-material/Diversity1';
@@ -31,6 +31,7 @@ import TravelExploreIcon from '@mui/icons-material/TravelExplore';
 import AddReactionIcon from '@mui/icons-material/AddReaction';
 import FormatListNumberedIcon from '@mui/icons-material/FormatListNumbered';
 import NoteAltIcon from '@mui/icons-material/NoteAlt';
+
 
 
 
@@ -157,6 +158,8 @@ const Sidebar = ({open,handleDrawerClose}) => {
             {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
           </IconButton>
         </DrawerHeader>
+
+
 
         <Divider />
 
@@ -314,6 +317,7 @@ const Sidebar = ({open,handleDrawerClose}) => {
 
 
 
+  
 
 
       </Drawer>

@@ -5,7 +5,7 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { StackedBarChart } from '@mui/icons-material';
-import { Stack } from '@mui/material';
+import { Button, Stack, styled } from '@mui/material';
 import { Theme } from '@fullcalendar/core/internal';
 import { useTheme } from '@emotion/react';
 import Head from '../../components/head';
@@ -16,6 +16,15 @@ export default function ControlledAccordions() {
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
+
+  const ColorButton = styled(Button)(({ theme }) => ({
+    // color: theme.palette.getContrastText(),
+    backgroundColor: theme.palette.magie.main,
+    '&:hover': {
+      backgroundColor: theme.palette.appco.main,
+    },
+  }));
+
 
   const theme=useTheme()
 
@@ -181,6 +190,24 @@ Les relations s'améliorent".
            Designed avec amour  by Lili Rose <br />
            Mon kiff pour l'informatique m'accompagne sur le chemin qui mène à la paix <br />
            Mon mantra : Chaque ligne de code, chaque pixel est une invitation à semer des graines de paix et de bien-être...
+           <br></br>
+           <ColorButton 
+
+
+onClick={() => {
+
+  window.location.href = 'https://lylyrosy.github.io/lilirose.dz/';
+
+
+ }} 
+
+
+
+sx={{
+  mt:'22px',
+  margin:'auto',
+display:'flex',
+textAlign:'center'}} variant="contained">Lili Rose Thérapie &nbsp; </ColorButton>
           </Typography>
         </AccordionDetails>
       </Accordion>

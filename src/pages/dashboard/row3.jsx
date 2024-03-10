@@ -59,9 +59,9 @@ const Row3 = () => {
     return (
 
 
-        <Stack flexDirection={"row"} gap={1} flexWrap={"wrap"} >
+        <Stack flexDirection={"row"} gap={2} flexWrap={"wrap"} >
             
-<Paper sx={{minWidth: '200px',width:'40%', mt:'22px', flexGrow:1}}>
+<Paper sx={{minWidth:"400px", maxWidth: "50%" ,mt:'22px', flexGrow:1}}>
 
 <Stack  flexDirection={"row"}
             flexWrap={"wrap"}
@@ -104,7 +104,7 @@ const Row3 = () => {
 
 </Paper>
 
-<Paper  sx={{minWidth: '200px',width:'40%', mt:'22px' , flexGrow:1}}>
+<Paper  sx={{minWidth:"400px", maxWidth: "50%", mt:'22px' , flexGrow:1}}>
 
 
 <Barchart data= {data} isbar={true} />
