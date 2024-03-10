@@ -161,7 +161,7 @@ const Sidebar = ({open,handleDrawerClose}) => {
         <Divider />
 
 
-        <Avatar sx={{transition:" 0.5" , mx:"auto", width:open?90:40, height:open? 90:40, my:1, border:"2px solid pink"}} alt="Remy Sharp" src="/lilirosedash/vecto.png" />
+        <Avatar sx={{transition:" 0.5" , mx:"auto", width:open?90:40, height:open? 90:40, my:1, border:"2px solid pink"}} alt="Remy Sharp" src="/lilirosedash/images/vecto.png" />
 <Typography align='center'  sx={{ color: theme.palette.magie.main, transition:" 0.5" ,fontSize:open? 16:0}}>Lili Rose</Typography>
 <Typography align='center'  sx={{transition:" 0.5" ,fontSize:open? 12:0}} >Diary Board</Typography>
 
