@@ -35,24 +35,24 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/lilirosedash" element={<  App />}>
       <Route index element={<Dashboard/>} />
-      <Route path="team" element={<Team />} />
-      <Route path="infos" element={<Infos />} />
-      <Route path="nouveau" element={<Nouveau />} />
-      <Route path="new" element={<New/>} />
+      <Route path="/lilirosedash/team" element={<Team />} />
+      <Route path="/lilirosedash/infos" element={<Infos />} />
+      <Route path="/lilirosedash/nouveau" element={<Nouveau />} />
+      <Route path="/lilirosedash/new" element={<New/>} />
 
-      <Route path="calendar" element={<Calendar />} />
-      <Route path="support" element={<Support />} />
+      <Route path="/lilirosedash/calendar" element={<Calendar />} />
+      <Route path="/lilirosedash/support" element={<Support />} />
     
 
 
-      <Route path="budget" element={<Budget />} />
-      <Route path="memo" element={<Memo/>} />
+      <Route path="/lilirosedash/budget" element={<Budget />} />
+      <Route path="/lilirosedash/memo" element={<Memo/>} />
 
-      <Route path="piechart" element={<Piechart/>} />
+      <Route path="/lilirosedash/piechart" element={<Piechart/>} />
 
-      <Route path="barpage" element={<Barpage/>} />
+      <Route path="/lilirosedash/barpage" element={<Barpage/>} />
 
-      <Route path="linechart" element={<Linechart/>} />
+      <Route path="/lilirosedash/linechart" element={<Linechart/>} />
 
 
 

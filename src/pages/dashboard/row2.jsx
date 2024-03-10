@@ -16,7 +16,7 @@ const Row2 = () => {
   const navigate= useNavigate();
 
   const voir = (params) => {
-    navigate('/linechart')
+    navigate('/lilirosedash/linechart')
 
     
   }

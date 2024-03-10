@@ -38,8 +38,8 @@ import NoteAltIcon from '@mui/icons-material/NoteAlt';
 const array1=[
   
   {"text":"Dashboard", "icon":<FoundationIcon/>, "path":"/lilirosedash"},
-  {"text":"Ajouter une activité", "icon":<AddReactionIcon/>, "path":"/new"},
-  {"text":"Mes activités", "icon":<FormatListNumberedIcon/>, "path":"/team"},
+  {"text":"Ajouter une activité", "icon":<AddReactionIcon/>, "path":"/lilirosedash/new"},
+  {"text":"Mes activités", "icon":<FormatListNumberedIcon/>, "path":"/lilirosedash/team"},
   // {"text":"Ajouter un membre ", "icon":<PermContactCalendarOutlinedIcon/>, "path":"/nouveau"},
   // {"text":"Team infos", "icon":<ContactsIcon />, "path":"/infos"},
 
@@ -51,11 +51,11 @@ const array2=[
 
   // {"text":"Calendrier", "icon":<CalendarMonthIcon/>, "path":"/calendar"},
 
-    {"text":"Mes notes", "icon":<NoteAltIcon/>, "path":"/memo"},
+    {"text":"Mes notes", "icon":<NoteAltIcon/>, "path":"/lilirosedash/memo"},
 
    
 
-   {"text":"Pépites optimistes", "icon":<AutoStoriesOutlinedIcon/>, "path":"/support"},
+   {"text":"Pépites optimistes", "icon":<AutoStoriesOutlinedIcon/>, "path":"/lilirosedash/support"},
 
 
 
@@ -64,11 +64,11 @@ const array2=[
 
 const array3=[
 
-    {"text":"Budget Bien-être", "icon":<MoneyIcon />, "path":"/budget"},
+    {"text":"Budget Bien-être", "icon":<MoneyIcon />, "path":"/lilirosedash/budget"},
 
-    {"text":"Diagramme à bandes", "icon":<BarChartOutlinedIcon/>, "path":"/barpage"},
-    {"text":"Diagramme à tartes", "icon":<PieChartOutlineIcon/>, "path":"/piechart"},
-    {"text":"Graphique de lignes", "icon":< StackedLineChartIcon />, "path":"/linechart"},
+    {"text":"Diagramme à bandes", "icon":<BarChartOutlinedIcon/>, "path":"/lilirosedash/barpage"},
+    {"text":"Diagramme à tartes", "icon":<PieChartOutlineIcon/>, "path":"/lilirosedash/piechart"},
+    {"text":"Graphique de lignes", "icon":< StackedLineChartIcon />, "path":"/lilirosedash/linechart"},
     // {"text":"Graphique en secteur", "icon":< TravelExploreIcon />, "path":"/geo"},
 
 
@@ -161,7 +161,7 @@ const Sidebar = ({open,handleDrawerClose}) => {
         <Divider />
 
 
-        <Avatar sx={{transition:" 0.5" , mx:"auto", width:open?90:40, height:open? 90:40, my:1, border:"2px solid pink"}} alt="Remy Sharp" src="./vecto.png" />
+        <Avatar sx={{transition:" 0.5" , mx:"auto", width:open?90:40, height:open? 90:40, my:1, border:"2px solid pink"}} alt="Remy Sharp" src="/lilirosedash/vecto.png" />
 <Typography align='center'  sx={{ color: theme.palette.magie.main, transition:" 0.5" ,fontSize:open? 16:0}}>Lili Rose</Typography>
 <Typography align='center'  sx={{transition:" 0.5" ,fontSize:open? 12:0}} >Diary Board</Typography>
 
