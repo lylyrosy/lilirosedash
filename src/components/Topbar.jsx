@@ -202,7 +202,7 @@ const Topbar = ({open,handleDrawerOpen,setMode}) => {
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
-              placeholder="Chercher un mot…"
+              placeholder="Search…"
               inputProps={{ 'aria-label': 'search' }}
               id="searchInput" // Ajoutez un ID à l'élément InputBase
               onChange={handleSearchChange}
