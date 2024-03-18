@@ -1,6 +1,5 @@
 {
   "homepage": "https://lylyrosy.github.io/lilirosedash",
-
   "name": "lilirosedash",
   "private": true,
   "version": "0.0.0",
@@ -9,7 +8,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy":"gh-pages -d build"
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
@@ -32,7 +31,7 @@
     "html-to-image": "^1.11.11",
     "preact": "^10.19.5",
     "react-hook-form": "^7.51.0",
-    "react-router-dom": "^6.22.2",
+    "react-router-dom": "^6.22.3",
     "uuid": "^9.0.1"
   },
   "devDependencies": {

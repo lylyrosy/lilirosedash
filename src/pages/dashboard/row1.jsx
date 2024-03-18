@@ -7,6 +7,7 @@ import { useTheme } from '@emotion/react';
 import { ResponsivePie } from '@nivo/pie'
 
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import LocalAtmIcon from '@mui/icons-material/LocalAtm';
 
 const data=[
     { id: 'Janvier', label: 'Janvier', value:0 },
@@ -27,7 +28,8 @@ const data=[
 
 
 
-const Row1 = () => {   
+const Row1 = () => {  
+
     const theme=useTheme()
 
 
@@ -43,11 +45,14 @@ const Row1 = () => {
 
       <Paperico icone= {<FormatListNumberedIcon sx={{fontSize:'23px', color:theme.palette.magie.main}} /> } libellé={"Activités"} nombre={localStorage.getItem("nbact")} titre={ localStorage.getItem("lastact")} />
 
+      <Paperico icone= {<LocalAtmIcon sx={{fontSize:'23px', color:theme.palette.magie.main}} /> } libellé={"Dépense mensuelle"} nombre={localStorage.getItem("moisbudget")} titre={ localStorage.getItem("lastbudget")!== "" ? localStorage.getItem("lastbudget") : "Aucune dépense"}  />
+
       <Paperico icone= {<NoteAltIcon sx={{fontSize:'23px', color:theme.palette.magie.main}}/> } libellé={"Notes"} nombre={localStorage.getItem("mydbeLength")} titre={localStorage.getItem("lastPrix")!== "" ? localStorage.getItem("lastPrix") : "Aucun titre"} />
 
 
 
-      <Paper sx={{height: '130px', minWidth:'450px', p:1.5, display:'flex', justifyContent:'space-between'}}>
+
+      <Paper sx={{height: '130px', minWidth:'450px',maxWidth:'50%', p:1.5, display:'flex', justifyContent:'space-between'}}>
 
 <Stack gap={1}>
 
@@ -283,26 +288,22 @@ const Row1 = () => {
 </Box>
 
 
-  {/* pie */}
 
-    {/* <Typography variant="body1" color= {theme.palette.text.primary}>titre</Typography> */}
 
-    {/* <Typography variant="body1" color= {theme.palette.text.primary}>La plus récente</Typography> */}
+
+
+                     </Stack>
+      
+            
+            </Paper> 
+
 
 
 </Stack>
-               
-              
-            </Paper>
-
-
-
-
 
 
             
-        </Stack>
-    );
-}
+    );}
+
 
 export default Row1;

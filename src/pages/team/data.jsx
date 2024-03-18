@@ -2,6 +2,7 @@
 export let rows = JSON.parse(localStorage.getItem('rows')) || [];
 
 
+
   export const addRow = (newData) => {
 
 
@@ -10,7 +11,8 @@ export let rows = JSON.parse(localStorage.getItem('rows')) || [];
   // Ajouter l'ID à la nouvelle donnée
   newData.id = id;
   // Ajouter la nouvelle ligne au tableau rows
-  rows = [...rows, newData];
+ 
+     rows = [...rows, newData];
 
   localStorage.setItem('rows', JSON.stringify(rows));
 

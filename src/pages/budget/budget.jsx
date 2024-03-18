@@ -93,6 +93,8 @@ const [dataline, setdataline] = useState([]);
     const newDatamois=parseFloat(formData.alimentation )+parseFloat(formData.soins)+parseFloat(formData.loisirs)+ parseFloat(formData.formation)+ parseFloat(formData.voyage)+ parseFloat(formData.equip) +parseFloat(formData.serv) 
 console.log(newDatamois)
 
+localStorage.setItem('moisbudget', JSON.stringify(newDatamois))
+localStorage.setItem('lastbudget', JSON.stringify(formData.mois))
 
 
 

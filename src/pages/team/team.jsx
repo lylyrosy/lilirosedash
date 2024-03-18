@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { DataGrid, GridToolbar} from '@mui/x-data-grid';
 import {  rows } from './data';
-import { Typography,Box, Button } from "@mui/material";
+import { Typography,Box, Button, Snackbar, Alert } from "@mui/material";
 import { useTheme } from '@emotion/react';
 
 import DirectionsBikeIcon from '@mui/icons-material/DirectionsBike';
@@ -12,22 +12,55 @@ import SportsHandballOutlinedIcon from '@mui/icons-material/SportsHandballOutlin
 import MonitorHeartOutlinedIcon from '@mui/icons-material/MonitorHeartOutlined';
 import DevicesOutlinedIcon from '@mui/icons-material/DevicesOutlined';
 import PaletteOutlinedIcon from '@mui/icons-material/PaletteOutlined';
-import { blue, green, grey, orange, pink, purple, red, yellow } from '@mui/material/colors';
+import { blue, green, orange, pink, purple, red, yellow } from '@mui/material/colors';
 
 import Head from '../../components/head';
+import { useLocation, useNavigate} from 'react-router-dom';
+
+
 
 const Team = () => {
 
 
+
+
     const theme=useTheme();
 
+const navigate=useNavigate();
+
+const location=useLocation();
+
+const [open, setOpen] = React.useState(false);
+
+const handleClick = () => {
+  setOpen(true);
+};
+
+const handleClose = (event, reason) => {
+  if (reason === 'clickaway') {
+    return;
+  }
+
+  setOpen(false);
+};
+
+
+
+
+
+
     const handleDelete = (idToDelete) => {
+
+
   
       // Filtrer les lignes pour exclure la ligne à supprimer
   const updatedRows = rows.filter(row => row.id !== idToDelete);
 
+
   // Mettre à jour le localStorage avec les lignes filtrées
   localStorage.setItem('rows', JSON.stringify(updatedRows));
+
+  
 
 
     // Vérifier si le tableau rows n'est pas vide
@@ -53,16 +86,22 @@ const Team = () => {
       localStorage.setItem('nbact', "0");
   
     }
-  
-  
 
-  // Rafraîchir la page pour refléter les changements (si nécessaire)
-  window.location.reload();
+
+    // window.location.reload()  
+
+    // Ouvrir le Snackbar
+    handleClick();
+
+
 
 
 
 
     };
+
+
+
 
 
 
@@ -165,8 +204,7 @@ const Team = () => {
     
       ];
 
-
-
+    
 
 
 
@@ -190,8 +228,26 @@ const Team = () => {
 
 
       
-      rows={rows} columns={columns} 
+      rows= {rows} 
+      
+      
+      columns={columns} 
       />
+
+
+<Snackbar    anchorOrigin={{ vertical: "top", horizontal: "left" }} //position de snack
+open={open} autoHideDuration={6000} onClose={handleClose}>
+<Alert
+onClose={handleClose}
+severity="success"
+variant="filled"
+sx={{ width: '100%' }}
+>
+
+Activité supprimée! 
+
+</Alert>
+</Snackbar>
     </Box>
             
         

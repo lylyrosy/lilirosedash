@@ -9,7 +9,7 @@ const Paperico = ({icone,libellé,nombre,titre}) => {
     return (
         <div>
             
-            <Paper sx={{height: '130px', minWidth:'450px', p:1.5, display:'flex', justifyContent:'space-between'}}>
+            <Paper sx={{height: '130px', minWidth:'450px', maxWidth:'50%', p:1.5, display:'flex', justifyContent:'space-between'}}>
 
 <Stack gap={1}>
 

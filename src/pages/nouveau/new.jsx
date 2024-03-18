@@ -269,7 +269,7 @@ helperText= { Boolean(errors.heure)?"Heure obligatoire,  saisir une heure valide
 <Box  sx={{textAlign:'right',mt:'22px'}}>
 
 <Button  type="submit" 
-sx={{textTransform:"capitalize", background:theme.palette.magie.main}} variant='contained'> Confimer  </Button>
+sx={{textTransform:"capitalize", background:theme.palette.magie.main}} variant='contained'> Confirmer  </Button>
 
 
 <Snackbar    anchorOrigin={{ vertical: "top", horizontal: "left" }} //position de snack
