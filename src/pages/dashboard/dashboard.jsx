@@ -9,7 +9,6 @@ import Head from '../../components/head';
 const Dashboard = () => {
 
 
-    window.location.reload()
 
     const theme=useTheme()
     return (

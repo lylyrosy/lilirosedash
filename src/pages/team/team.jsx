@@ -88,13 +88,12 @@ const handleClose = (event, reason) => {
     }
 
 
-    // window.location.reload()  
+    window.location.reload()  
 
     // Ouvrir le Snackbar
     handleClick();
 
 
-navigate('/lilirosedash')
 
 
 
