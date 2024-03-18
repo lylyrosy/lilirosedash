@@ -94,7 +94,7 @@ const handleClose = (event, reason) => {
     handleClick();
 
 
-
+navigate('/lilirosedash')
 
 
 
