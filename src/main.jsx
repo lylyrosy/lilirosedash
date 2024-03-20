@@ -20,6 +20,7 @@ import Memo from './pages/memo/memo';
 import Piechart from './pages/pie/piechart';
 import Barpage from './pages/barchart/barpage';
 import Linechart from './pages/line/linechart';
+import Actymap from './pages/team/actymap';
 
 
 import {
@@ -35,7 +36,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/lilirosedash" element={<  App />}>
       <Route index element={<Dashboard/>} />
-      <Route path="/lilirosedash/team" element={<Team />} />
+      <Route path="/lilirosedash/team" element={<Actymap />} />
       <Route path="/lilirosedash/infos" element={<Infos />} />
       <Route path="/lilirosedash/nouveau" element={<Nouveau />} />
       <Route path="/lilirosedash/new" element={<New/>} />

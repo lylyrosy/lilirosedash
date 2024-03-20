@@ -112,7 +112,16 @@ const New = () => {
   
     const onSubmit = (formData) =>{
       
-      addRow(formData);
+      // addRow(formData);
+
+
+      const newItem = { id: Date.now(), titre: formData.titre,lieu:formData.lieu,duree:formData.duree,heure:formData.heure,matos:formData.matos,partic: formData.notes,categ: formData.des};
+      const existingItems = JSON.parse(localStorage.getItem('rows')) || [];
+      const updatedItems = [...existingItems, newItem];
+      localStorage.setItem('rows', JSON.stringify(updatedItems));
+      localStorage.setItem('nbact', updatedItems.length);
+      localStorage.setItem('lastact', formData.titre); 
+
   
 
       handleClick(); 

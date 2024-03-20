@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState,useRef } from 'react';
 import { DataGrid, GridToolbar} from '@mui/x-data-grid';
-import {  rows } from './data';
-import { Typography,Box, Button, Snackbar, Alert } from "@mui/material";
+
+import {  rows, handleDelete,getRows } from './data';
+import { Typography,Box, Button, Snackbar, Alert, IconButton, MenuItem, Menu } from "@mui/material";
 import { useTheme } from '@emotion/react';
 
 import DirectionsBikeIcon from '@mui/icons-material/DirectionsBike';
@@ -22,7 +23,7 @@ import { useLocation, useNavigate} from 'react-router-dom';
 const Team = () => {
 
 
-
+ 
 
     const theme=useTheme();
 
@@ -31,6 +32,8 @@ const navigate=useNavigate();
 const location=useLocation();
 
 const [open, setOpen] = React.useState(false);
+
+
 
 const handleClick = () => {
   setOpen(true);
@@ -45,59 +48,12 @@ const handleClose = (event, reason) => {
 };
 
 
+// const handlerow = (idToDelete) => {
+//   handleDelete(idToDelete) ; 
+//   handleClick();
 
 
-
-
-    const handleDelete = (idToDelete) => {
-
-
-  
-      // Filtrer les lignes pour exclure la ligne à supprimer
-  const updatedRows = rows.filter(row => row.id !== idToDelete);
-
-
-  // Mettre à jour le localStorage avec les lignes filtrées
-  localStorage.setItem('rows', JSON.stringify(updatedRows));
-
-  
-
-
-    // Vérifier si le tableau rows n'est pas vide
-    if (updatedRows.length > 0) {
-      // Récupérer le dernier élément (dernière ligne) du tableau rows
-      let lastRow = updatedRows[updatedRows.length - 1];
-      // Récupérer le titre de la dernière ligne
-      let lastTitle = lastRow.titre;
-      localStorage.setItem('lastact',lastTitle  );
-  
-      // Récupérer la longueur du tableau rows
-      let nb = updatedRows.length;
-      localStorage.setItem('nbact', nb);
-  
-  
-  
-      // Retourner le dernier titre et la longueur du tableau
-      
-  
-    } else {
-      // Si le tableau rows est vide, retourner des valeurs par défaut
-      localStorage.setItem('lastact',"Aucune activité"  );
-      localStorage.setItem('nbact', "0");
-  
-    }
-
-
-    window.location.reload()  
-
-    // Ouvrir le Snackbar
-    handleClick();
-
-
-
-
-
-    };
+// }
 
 
 
@@ -183,22 +139,23 @@ const handleClose = (event, reason) => {
         { field: 'notes', headerName: 'Description',  flex: 1,align:'center' ,headerAlign:"center"},
 
 
-        {
-          field: 'actions',
-          headerName: 'Actions',
-          flex: 1,
-          align: 'center',
-          headerAlign: 'center',
-          sortable: false,
+        // {
+        //   field: 'actions',
+        //   headerName: 'Actions',
+        //   flex: 1,
+        //   align: 'center',
+        //   headerAlign: 'center',
+        //   sortable: false,
           
-          renderCell: ({ row}) => (
-            <Button   onClick={() => handleDelete(row.id)} variant="outlined"        
-            sx={{ color: theme.palette.magie.main, borderColor: theme.palette.magie.main }}
-            >
-              Supprimer
-            </Button>
-          ),
-        },
+        //   renderCell: ({ row}) => (
+        //     <Button   onClick={() => handlerow(row.id) }
+        //    variant="outlined"        
+        //     sx={{ color: theme.palette.magie.main, borderColor: theme.palette.magie.main }}
+        //     >
+        //       Supprimer
+        //     </Button>
+        //   ),
+        // },
 
     
       ];
@@ -228,9 +185,12 @@ const handleClose = (event, reason) => {
 
       
       rows= {rows} 
-      
-      
+
+
       columns={columns} 
+
+
+
       />
 
 

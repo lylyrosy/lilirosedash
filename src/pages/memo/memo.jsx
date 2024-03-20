@@ -267,16 +267,6 @@ textAlign:'center'}} variant="contained">Ajouter une note &nbsp; <NoteAltIcon/><
 
 
 
-
-
-
-
-
-
-
-
-
-
 {/* AFFICHER MES NOTES LES UNES A COTE DES AUTRES */}
 
 <Box sx={{display:'flex', gap:1, flexWrap:'wrap', width:'90%' ,mx:'auto'}}>
