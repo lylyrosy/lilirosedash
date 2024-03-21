@@ -15,12 +15,15 @@ import { blue, green, orange, pink, purple, red, yellow } from '@mui/material/co
 
 const Acty = ({titre, heure,lieu,duree,partic,matos,categ, handleDelete, item}) => {
 
-  const ims=["/lilirosedash/images/act.jpg","/lilirosedash/images/act2.jpg","/lilirosedash/images/act3.jpg"]
+  const ims=["/lilirosedash/images/act.jpg","/lilirosedash/images/act2.jpg","/lilirosedash/images/act3.jpg","/lilirosedash/images/act4.jpg"
+  ,"/lilirosedash/images/act6.jpg","/lilirosedash/images/act7.jpg","/lilirosedash/images/act8.jpg"
+
+]
  
 
 
   const random = (params) => {
-    const random=Math.floor(Math.random()*3)
+    const random=Math.floor(Math.random()*7)
     return random
   }
 
@@ -33,7 +36,32 @@ const Acty = ({titre, heure,lieu,duree,partic,matos,categ, handleDelete, item}) 
 <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         sx={{ height: 140 }}
-        image={ims[random()]}
+
+
+
+        // image={ims[random()]}
+image={  categ  === 'Happy Family' ? "/lilirosedash/images/family.jpg":
+categ  === 'Job& Gig' ? "/lilirosedash/images/act.jpg":
+categ  === 'Creative Fanatics' ? "/lilirosedash/images/act2.jpg" :
+categ  === 'Tech Savvy Crew' ? "/lilirosedash/images/act7.jpg" : 
+categ  === 'Services' ? "/lilirosedash/images/service.jpg" :
+categ  === 'Best freinds' ? "/lilirosedash/images/bestf.jpg" : 
+categ  === 'Hobbies' ? "/lilirosedash/images/hobb.jpg" : 
+categ  === 'Autre' ? "/lilirosedash/images/act8.jpg" : 
+categ  === 'Welness warriors' ? "/lilirosedash/images/cleanmind.jpg" : null
+
+
+
+
+
+
+
+
+
+
+}
+
+
         title="Lili Rose"
       />
       <CardContent>
